@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* Class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Noto Sans Bengali", serif;
+
+  --color-brand-50: #fef2f2;
+  --color-brand-100: #fee2e2;
+  --color-brand-200: #fecaca;
+  --color-brand-300: #fca5a5;
+  --color-brand-400: #f87171;
+  --color-brand-500: #ef4444;
+  --color-brand-600: #dc2626;
+  --color-brand-700: #b91c1c;
+  --color-brand-800: #991b1b;
+  --color-brand-900: #7f1d1d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+  font-family: var(--font-sans);
+}
+
+/* Long-form article typography */
+.prose-article {
+  @apply text-base leading-8 sm:text-lg sm:leading-9;
+}
+
+.prose-article > * + * {
+  @apply mt-6;
+}
+
+.prose-article h2 {
+  @apply mt-10 text-2xl font-extrabold tracking-tight sm:text-3xl;
+}
+
+.prose-article h3 {
+  @apply mt-8 text-xl font-bold sm:text-2xl;
+}
+
+.prose-article p {
+  @apply text-zinc-700 dark:text-zinc-300;
+}
+
+.prose-article a {
+  @apply font-medium text-brand-600 underline decoration-brand-300 underline-offset-4 hover:text-brand-700 dark:text-brand-400 dark:decoration-brand-700;
+}
+
+.prose-article ul {
+  @apply list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300;
+}
+
+.prose-article ol {
+  @apply list-decimal space-y-2 pl-6 text-zinc-700 dark:text-zinc-300;
+}
+
+.prose-article blockquote {
+  @apply border-l-4 border-brand-500 bg-zinc-50 py-4 pl-6 pr-4 text-xl font-medium italic text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200;
+}
+
+.prose-article blockquote p {
+  @apply my-0 text-inherit;
+}
+
+.prose-article img {
+  @apply rounded-xl;
+}
+
+.prose-article pre {
+  @apply overflow-x-auto rounded-lg bg-zinc-900 p-4 text-sm text-zinc-100;
+}
+
+.prose-article code {
+  @apply rounded bg-zinc-100 px-1.5 py-0.5 text-sm font-mono text-pink-600 dark:bg-zinc-800 dark:text-pink-400;
+}
+
+.prose-article pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.prose-article figure {
+  @apply my-8;
+}
+
+.prose-article figcaption {
+  @apply mt-2 text-center text-sm text-zinc-500 dark:text-zinc-400;
+}
+
+.prose-article table {
+  @apply w-full border-collapse text-left text-sm;
+}
+
+.prose-article th {
+  @apply border-b-2 border-zinc-200 pb-2 font-semibold dark:border-zinc-700;
+}
+
+.prose-article td {
+  @apply border-b border-zinc-100 py-2 dark:border-zinc-800;
+}
+
+/* Editor contenteditable placeholder */
+[contenteditable][data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  @apply text-zinc-400;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-zinc-300 dark:bg-zinc-700;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}

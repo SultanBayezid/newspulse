@@ -1,0 +1,19 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# Environment files
+.env
+.env.backup
+.env.production
+backend/.env
+frontend/.env.local
+
+# Logs
+*.log
+npm-debug.log*

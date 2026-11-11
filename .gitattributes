@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css linguist-diffable
+*.html linguist-diffable
+*.md linguist-documentation
+*.php diff=php linguist-language=PHP
+*.vue linguist-language=Vue
+*.js linguist-language=JavaScript
+
+backend/.github export-ignore
+backend/public/hot export-ignore
+backend/storage/*.key export-ignore

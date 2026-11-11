@@ -1,0 +1,27 @@
+{
+  "name": "newspulse-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "NewsPulse news portal - Vue 3 single page application",
+  "author": "Sultan Bayezid <sultanbayezidai@gmail.com> (https://lastlineweb.com)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.21.1",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.44",
+    "vue-i18n": "^10.0.8",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.6"
+  }
+}
